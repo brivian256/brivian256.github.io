@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | YADA-EXPERIENCE</title>
+    <meta name="description" content="Support YADA-EXPERIENCE's mission to empower young individuals to discover their purpose through meaningful experiences and guided mentorship.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .payment-method {
+            margin: 0 15px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 120px;
+        }
+        
+        .payment-method.active {
+            border-color: var(--deep-purple);
+            background-color: rgba(88, 43, 133, 0.05);
+        }
+        
+        .payment-method img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .payment-method-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .payment-form {
+            display: none;
+        }
+        
+        .payment-form.active {
+            display: block;
+        }
+        
+        .mobile-money-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .mobile-money-instructions {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--vibrant-teal);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .mobile-money-instructions ol {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        
+        .mobile-money-instructions li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-text">YADA-EXPERIENCE</div>
+                </a>
+            </div>
+            
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="donate.html" class="nav-link active">Donate</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your donation empowers youth to discover their purpose and create lasting impact</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section donate-intro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support Youth Purpose Discovery</h2>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <p class="text-center">Your donation to YADA-EXPERIENCE directly empowers young individuals to discover their purpose and develop the skills needed to create meaningful impact in their lives and communities. As a forward-thinking youth development organization, we rely on the generosity of supporters who believe in the transformative power of purpose-driven living and want to help make this journey accessible to more young people.</p>
+                    <p class="text-center">When you contribute to YADA-EXPERIENCE, you're not simply funding programs—you're investing in the future of young individuals who will shape our communities and world for decades to come. Your support enables us to create high-quality experiences, provide mentorship, develop innovative resources, and ensure our services remain accessible to youth from all socioeconomic backgrounds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Impact Section -->
+    <section class="section section-alt donation-impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Impact</h2>
+            </div>
+            
+            <h3 class="text-center">What Your Donation Provides</h3>
+            <div class="row">
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$50</div>
+                        <p>Provides materials for one young person to participate in a self-discovery workshop, including assessment tools, reflection journals, and take-home resources.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$100</div>
+                        <p>Sponsors a young person's participation in a one-day purpose discovery workshop, covering all program costs and ensuring accessibility regardless of financial circumstances.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$250</div>
+                        <p>Funds a semester of one-on-one mentorship for a young person, including mentor training, support materials, and ongoing program coordination.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$500</div>
+                        <p>Enables us to bring purpose-centered programming to a classroom for a month, impacting 25-30 students with activities that connect academic learning to personal purpose.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$1,000</div>
+                        <p>Supports the development of new curriculum materials that integrate the latest research and best practices in youth purpose development.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <div class="impact-card">
+                        <div class="impact-amount">$2,500</div>
+                        <p>Funds a full scholarship for a young person to participate in our comprehensive year-long purpose development journey, including workshops, mentorship, and experiential learning opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="section success-stories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Stories of Impact</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col col-md-4 col-sm-12">
+                    <div class="story-card">
+                        <div class="story-image" style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: #999;"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>Sarah's Journey</h3>
+                            <p>Before connecting with YADA-EXPERIENCE, Sarah was struggling to find direction after completing secondary school. Through our purpose discovery workshop and subsequent mentorship program, she identified her passion for community health education.</p>
+                            <p>With newfound clarity and confidence, Sarah enrolled in a public health program and now leads youth health initiatives in her community. "YADA didn't just help me choose a career path—it helped me understand why I'm here and how I can make a difference," she shares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <div class="story-card">
+                        <div class="story-image" style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: #999;"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>Michael's Transformation</h3>
+                            <p>As a quiet student often overlooked in the classroom, Michael hadn't recognized his natural leadership abilities. Through our in-school program, he discovered his gift for bringing people together around shared goals.</p>
+                            <p>With mentorship and skill development, Michael started a community service club at his school that has now engaged over 100 students in local improvement projects. "I never saw myself as a leader before," Michael reflects. "YADA helped me see strengths in myself I didn't know existed and gave me the confidence to use them."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <div class="story-card">
+                        <div class="story-image" style="background-color: #f0f0f0; height: 200px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user-circle" style="font-size: 4rem; color: #999;"></i>
+                        </div>
+                        <div class="story-content">
+                            <h3>Amina's Discovery</h3>
+                            <p>Feeling pressure to pursue a conventional career path despite her creative interests, Amina was experiencing anxiety about her future. Through our career exploration program, she connected with professionals in creative fields and discovered viable pathways that aligned with her artistic talents.</p>
+                            <p>Today, Amina runs a small design business while pursuing further education, combining purpose and practicality. "YADA showed me I didn't have to choose between my passion and making a living," Amina explains. "I found a way to do both that feels authentic to who I am."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options Section -->
+    <section class="section section-alt donation-options">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ways to Give</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col col-md-6 col-sm-12">
+                    <div class="donation-method">
+                        <h3>One-Time Donation</h3>
+                        <p>Make an immediate impact with a single contribution of any amount. One-time donations support our current programming and help us respond to emerging opportunities to serve more young people.</p>
+                        
+                        <div class="donation-form one-time-donation">
+                            <h4>Select Amount</h4>
+                            <div class="donation-amounts">
+                                <div class="donation-amount" data-amount="25">
+                                    <div class="donation-amount-value">$25</div>
+                                </div>
+                                <div class="donation-amount" data-amount="50">
+                                    <div class="donation-amount-value">$50</div>
+                                </div>
+                                <div class="donation-amount active" data-amount="100">
+                                    <div class="donation-amount-value">$100</div>
+                                </div>
+                                <div class="donation-amount" data-amount="250">
+                                    <div class="donation-amount-value">$250</div>
+                                </div>
+                                <div class="donation-amount" data-amount="500">
+                                    <div class="donation-amount-value">$500</div>
+                                </div>
+                            </div>
+                            
+                            <div class="donation-custom">
+                                <h4>Custom Amount</h4>
+                                <input type="text" id="one-time-custom-amount" placeholder="Enter amount">
+                            </div>
+                            
+                            <h4>Select Payment Method</h4>
+                            <div class="payment-methods" id="one-time-payment-methods">
+                                <div class="payment-method active" data-method="paypal">
+                                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal">
+                                    <div class="payment-method-name">PayPal</div>
+                                </div>
+                                <div class="payment-method" data-method="mtn">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/New_Logo_MTN.svg/1200px-New_Logo_MTN.svg.png" alt="MTN Mobile Money">
+                                    <div class="payment-method-name">MTN Money</div>
+                                </div>
+                                <div class="payment-method" data-method="airtel">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Airtel_logo.svg/1200px-Airtel_logo.svg.png" alt="Airtel Money">
+                                    <div class="payment-method-name">Airtel Money</div>
+                                </div>
+                            </div>
+                            
+                            <!-- PayPal Form -->
+                            <div class="payment-form active" id="one-time-paypal-form">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="one-time-donation-form">
+                                    <input type="hidden" name="cmd" value="_donations">
+                                    <input type="hidden" name="business" value="yadaexperience19@gmail.com">
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="hidden" name="amount" id="one-time-amount" value="100.00">
+                                    <input type="hidden" name="item_name" value="One-time donation to YADA-EXPERIENCE">
+                                    <input type="hidden" name="return" value="https://yadaexperience.org/thank-you.html">
+                                    <input type="hidden" name="cancel_return" value="https://yadaexperience.org/donate.html">
+                                    <button type="submit" class="btn btn-primary" id="one-time-donate-button">Donate Now with PayPal</button>
+                                </form>
+                            </div>
+                            
+                            <!-- MTN Mobile Money Form -->
+                            <div class="payment-form" id="one-time-mtn-form">
+                                <div class="mobile-money-form">
+                                    <div class="mobile-money-instructions">
+                                        <h4>How to donate with MTN Mobile Money:</h4>
+                                        <ol>
+                                            <li>Dial *165# on your MTN line</li>
+                                            <li>Select "Make Payments"</li>
+                                            <li>Select "Enter Number"</li>
+                                            <li>Enter <strong>+256 783 501 007</strong></li>
+                                            <li>Enter the amount you wish to donate</li>
+                                            <li>Enter your PIN to confirm</li>
+                                            <li>You will receive a confirmation SMS</li>
+                                        </ol>
+                                        <p>Please include "YADA Donation" in the reference if possible.</p>
+                                    </div>
+                                    <form id="mtn-confirmation-form">
+                                        <div class="form-group">
+                                            <label for="mtn-name">Your Name</label>
+                                            <input type="text" class="form-control" id="mtn-name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-phone">Your Phone Number</label>
+                                            <input type="tel" class="form-control" id="mtn-phone" placeholder="Enter your MTN number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-amount">Amount Sent (UGX)</label>
+                                            <input type="text" class="form-control" id="mtn-amount" placeholder="Enter amount sent">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-transaction">Transaction ID (Optional)</label>
+                                            <input type="text" class="form-control" id="mtn-transaction" placeholder="Enter transaction ID from SMS">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Confirm Donation</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <!-- Airtel Money Form -->
+                            <div class="payment-form" id="one-time-airtel-form">
+                                <div class="mobile-money-form">
+                                    <div class="mobile-money-instructions">
+                                        <h4>How to donate with Airtel Money:</h4>
+                                        <ol>
+                                            <li>Dial *185# on your Airtel line</li>
+                                            <li>Select "Make Payments"</li>
+                                            <li>Select "Pay Bill"</li>
+                                            <li>Enter <strong>+256 783 501 007</strong></li>
+                                            <li>Enter the amount you wish to donate</li>
+                                            <li>Enter your PIN to confirm</li>
+                                            <li>You will receive a confirmation SMS</li>
+                                        </ol>
+                                        <p>Please include "YADA Donation" in the reference if possible.</p>
+                                    </div>
+                                    <form id="airtel-confirmation-form">
+                                        <div class="form-group">
+                                            <label for="airtel-name">Your Name</label>
+                                            <input type="text" class="form-control" id="airtel-name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-phone">Your Phone Number</label>
+                                            <input type="tel" class="form-control" id="airtel-phone" placeholder="Enter your Airtel number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-amount">Amount Sent (UGX)</label>
+                                            <input type="text" class="form-control" id="airtel-amount" placeholder="Enter amount sent">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-transaction">Transaction ID (Optional)</label>
+                                            <input type="text" class="form-control" id="airtel-transaction" placeholder="Enter transaction ID from SMS">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Confirm Donation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-6 col-sm-12">
+                    <div class="donation-method">
+                        <h3>Monthly Giving</h3>
+                        <p>Join our Purpose Partners by setting up a recurring monthly donation. This sustainable support allows us to plan effectively for the future and develop long-term initiatives. Monthly donors receive special updates about the impact of their ongoing commitment.</p>
+                        
+                        <div class="donation-form monthly-donation">
+                            <h4>Select Monthly Amount</h4>
+                            <div class="donation-amounts">
+                                <div class="donation-amount" data-amount="10">
+                                    <div class="donation-amount-value">$10</div>
+                                </div>
+                                <div class="donation-amount active" data-amount="25">
+                                    <div class="donation-amount-value">$25</div>
+                                </div>
+                                <div class="donation-amount" data-amount="50">
+                                    <div class="donation-amount-value">$50</div>
+                                </div>
+                                <div class="donation-amount" data-amount="100">
+                                    <div class="donation-amount-value">$100</div>
+                                </div>
+                                <div class="donation-amount" data-amount="200">
+                                    <div class="donation-amount-value">$200</div>
+                                </div>
+                            </div>
+                            
+                            <div class="donation-custom">
+                                <h4>Custom Monthly Amount</h4>
+                                <input type="text" id="monthly-custom-amount" placeholder="Enter amount">
+                            </div>
+                            
+                            <h4>Select Payment Method</h4>
+                            <div class="payment-methods" id="monthly-payment-methods">
+                                <div class="payment-method active" data-method="paypal">
+                                    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal">
+                                    <div class="payment-method-name">PayPal</div>
+                                </div>
+                                <div class="payment-method" data-method="mtn">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/New_Logo_MTN.svg/1200px-New_Logo_MTN.svg.png" alt="MTN Mobile Money">
+                                    <div class="payment-method-name">MTN Money</div>
+                                </div>
+                                <div class="payment-method" data-method="airtel">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Airtel_logo.svg/1200px-Airtel_logo.svg.png" alt="Airtel Money">
+                                    <div class="payment-method-name">Airtel Money</div>
+                                </div>
+                            </div>
+                            
+                            <!-- PayPal Form -->
+                            <div class="payment-form active" id="monthly-paypal-form">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="monthly-donation-form">
+                                    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                                    <input type="hidden" name="business" value="yadaexperience19@gmail.com">
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="hidden" name="a3" id="monthly-amount" value="25.00">
+                                    <input type="hidden" name="p3" value="1">
+                                    <input type="hidden" name="t3" value="M">
+                                    <input type="hidden" name="src" value="1">
+                                    <input type="hidden" name="sra" value="1">
+                                    <input type="hidden" name="item_name" value="Monthly donation to YADA-EXPERIENCE">
+                                    <input type="hidden" name="return" value="https://yadaexperience.org/thank-you.html">
+                                    <input type="hidden" name="cancel_return" value="https://yadaexperience.org/donate.html">
+                                    <button type="submit" class="btn btn-primary" id="monthly-donate-button">Become a Monthly Donor with PayPal</button>
+                                </form>
+                            </div>
+                            
+                            <!-- MTN Mobile Money Form -->
+                            <div class="payment-form" id="monthly-mtn-form">
+                                <div class="mobile-money-form">
+                                    <div class="mobile-money-instructions">
+                                        <h4>How to set up monthly donations with MTN Mobile Money:</h4>
+                                        <p>For recurring donations, please follow these steps:</p>
+                                        <ol>
+                                            <li>Set a calendar reminder to make your monthly donation</li>
+                                            <li>Each month, dial *165# on your MTN line</li>
+                                            <li>Select "Make Payments"</li>
+                                            <li>Select "Enter Number"</li>
+                                            <li>Enter <strong>+256 783 501 007</strong></li>
+                                            <li>Enter your monthly donation amount</li>
+                                            <li>Enter your PIN to confirm</li>
+                                        </ol>
+                                        <p>Please include "YADA Monthly" in the reference if possible.</p>
+                                        <p>Contact us at donations@yadaexperience.org to let us know you've set up a monthly donation so we can send you updates about your impact.</p>
+                                    </div>
+                                    <form id="mtn-monthly-form">
+                                        <div class="form-group">
+                                            <label for="mtn-monthly-name">Your Name</label>
+                                            <input type="text" class="form-control" id="mtn-monthly-name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-monthly-phone">Your Phone Number</label>
+                                            <input type="tel" class="form-control" id="mtn-monthly-phone" placeholder="Enter your MTN number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-monthly-amount">Monthly Amount (UGX)</label>
+                                            <input type="text" class="form-control" id="mtn-monthly-amount" placeholder="Enter monthly amount">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mtn-monthly-email">Email (for updates)</label>
+                                            <input type="email" class="form-control" id="mtn-monthly-email" placeholder="Enter your email">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Register as Monthly Donor</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <!-- Airtel Money Form -->
+                            <div class="payment-form" id="monthly-airtel-form">
+                                <div class="mobile-money-form">
+                                    <div class="mobile-money-instructions">
+                                        <h4>How to set up monthly donations with Airtel Money:</h4>
+                                        <p>For recurring donations, please follow these steps:</p>
+                                        <ol>
+                                            <li>Set a calendar reminder to make your monthly donation</li>
+                                            <li>Each month, dial *185# on your Airtel line</li>
+                                            <li>Select "Make Payments"</li>
+                                            <li>Select "Pay Bill"</li>
+                                            <li>Enter <strong>+256 783 501 007</strong></li>
+                                            <li>Enter your monthly donation amount</li>
+                                            <li>Enter your PIN to confirm</li>
+                                        </ol>
+                                        <p>Please include "YADA Monthly" in the reference if possible.</p>
+                                        <p>Contact us at donations@yadaexperience.org to let us know you've set up a monthly donation so we can send you updates about your impact.</p>
+                                    </div>
+                                    <form id="airtel-monthly-form">
+                                        <div class="form-group">
+                                            <label for="airtel-monthly-name">Your Name</label>
+                                            <input type="text" class="form-control" id="airtel-monthly-name" placeholder="Enter your name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-monthly-phone">Your Phone Number</label>
+                                            <input type="tel" class="form-control" id="airtel-monthly-phone" placeholder="Enter your Airtel number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-monthly-amount">Monthly Amount (UGX)</label>
+                                            <input type="text" class="form-control" id="airtel-monthly-amount" placeholder="Enter monthly amount">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="airtel-monthly-email">Email (for updates)</label>
+                                            <input type="email" class="form-control" id="airtel-monthly-email" placeholder="Enter your email">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Register as Monthly Donor</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Give Section -->
+    <section class="section other-ways">
+        <div class="container">
+            <div class="section-title">
+                <h2>Other Ways to Give</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col col-md-4 col-sm-12">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="feature-title">Corporate Matching</h3>
+                        <p>Many companies match employee donations, potentially doubling or even tripling your impact. Check with your employer about matching gift programs, and let us know if you need any documentation to facilitate the match.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 class="feature-title">In-Kind Donations</h3>
+                        <p>We welcome donations of goods and services that support our programs, including office supplies and equipment, technology resources, venue space for events, professional services, and refreshments for youth programs.</p>
+                        <p>Contact our development team at donations@yadaexperience.org to discuss in-kind donation possibilities.</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="feature-title">Legacy Giving</h3>
+                        <p>Create a lasting impact by including YADA-EXPERIENCE in your estate planning. Legacy gifts ensure that future generations of young people will have access to purpose discovery resources and experiences.</p>
+                        <p>For information about including YADA-EXPERIENCE in your will or other planned giving options, please contact our executive director at director@yadaexperience.org.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Policy Section -->
+    <section class="section section-alt donation-policy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Commitment to You</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col col-md-6 col-sm-12">
+                    <h3>Donation Policy</h3>
+                    <p>YADA-EXPERIENCE is committed to ethical fundraising practices and transparent stewardship of all donations. We pledge that:</p>
+                    <ul>
+                        <li>A minimum of 80% of all donations directly fund program activities</li>
+                        <li>Administrative costs are kept as low as possible without compromising program quality</li>
+                        <li>All donors receive acknowledgment and impact updates</li>
+                        <li>Donor information is kept confidential and never sold or shared</li>
+                        <li>Donors may choose to remain anonymous in public recognition</li>
+                    </ul>
+                </div>
+                <div class="col col-md-6 col-sm-12">
+                    <h3>Financial Accountability</h3>
+                    <p>As a registered nonprofit organization, YADA-EXPERIENCE maintains strict financial controls and undergoes regular audits to ensure proper management of all funds. Our annual reports and financial statements are available upon request.</p>
+                    <p>We are committed to maximizing the impact of every donation by maintaining efficient operations, leveraging volunteer support, and building strategic partnerships that extend our reach without increasing costs.</p>
+                    <h3>Recognition and Appreciation</h3>
+                    <p>We are deeply grateful for every supporter who makes our work possible. With your permission, we recognize donors in our annual report, on our donor wall at the YADA Center, at events, and through named scholarship opportunities.</p>
+                    <p>We respect the privacy of donors who prefer to remain anonymous and will honor such requests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Development Team Section -->
+    <section class="section contact-development">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Our Development Team</h2>
+            </div>
+            
+            <p class="text-center">Have questions about making a donation or want to discuss specific giving opportunities? Our development team is here to help.</p>
+            
+            <div class="contact-info text-center">
+                <p><strong>Email:</strong> donations@yadaexperience.org</p>
+                <p><strong>Phone:</strong> +256 783 501 007</p>
+                <p><strong>Mail:</strong> YADA-EXPERIENCE, [Mailing Address], Kampala, Uganda</p>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-4 col-sm-12">
+                    <div class="footer-logo">
+                        <div class="logo-text" style="color: white;">YADA-EXPERIENCE</div>
+                    </div>
+                    <p class="footer-text">Empowering young individuals to discover their purpose, harness their unique strengths, and create a lasting impact through meaningful experiences and guided mentorship.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/yadaxperience?igsh=MWYyY3lnZDN2dnhhYQ%3D%3D&utm_source=qr" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/yadaxperience?s=11" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col col-md-2 col-sm-6 col-6">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="events.html">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-2 col-sm-6 col-6">
+                    <div class="footer-links">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="get-involved.html">Volunteer</a></li>
+                            <li><a href="get-involved.html">Become a Mentor</a></li>
+                            <li><a href="get-involved.html">Join Our Team</a></li>
+                            <li><a href="donate.html">Donate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                            <li><i class="fas fa-phone"></i> +256 783 501 007</li>
+                            <li><i class="fas fa-envelope"></i> yadaexperience19@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YADA-EXPERIENCE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/donation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Payment method selection for one-time donations
+            const oneTimePaymentMethods = document.querySelectorAll('#one-time-payment-methods .payment-method');
+            const oneTimePaymentForms = document.querySelectorAll('.one-time-donation .payment-form');
+            
+            oneTimePaymentMethods.forEach(function(method) {
+                method.addEventListener('click', function() {
+                    // Remove active class from all methods
+                    oneTimePaymentMethods.forEach(function(m) {
+                        m.classList.remove('active');
+                    });
+                    
+                    // Add active class to selected method
+                    this.classList.add('active');
+                    
+                    // Hide all payment forms
+                    oneTimePaymentForms.forEach(function(form) {
+                        form.classList.remove('active');
+                    });
+                    
+                    // Show selected payment form
+                    const methodType = this.getAttribute('data-method');
+                    document.getElementById(`one-time-${methodType}-form`).classList.add('active');
+                    
+                    // Update button text
+                    const donateButton = document.getElementById('one-time-donate-button');
+                    if (donateButton) {
+                        donateButton.textContent = `Donate Now with ${methodType.charAt(0).toUpperCase() + methodType.slice(1)}`;
+                    }
+                });
+            });
+            
+            // Payment method selection for monthly donations
+            const monthlyPaymentMethods = document.querySelectorAll('#monthly-payment-methods .payment-method');
+            const monthlyPaymentForms = document.querySelectorAll('.monthly-donation .payment-form');
+            
+            monthlyPaymentMethods.forEach(function(method) {
+                method.addEventListener('click', function() {
+                    // Remove active class from all methods
+                    monthlyPaymentMethods.forEach(function(m) {
+                        m.classList.remove('active');
+                    });
+                    
+                    // Add active class to selected method
+                    this.classList.add('active');
+                    
+                    // Hide all payment forms
+                    monthlyPaymentForms.forEach(function(form) {
+                        form.classList.remove('active');
+                    });
+                    
+                    // Show selected payment form
+                    const methodType = this.getAttribute('data-method');
+                    document.getElementById(`monthly-${methodType}-form`).classList.add('active');
+                    
+                    // Update button text
+                    const donateButton = document.getElementById('monthly-donate-button');
+                    if (donateButton) {
+                        donateButton.textContent = `Become a Monthly Donor with ${methodType.charAt(0).toUpperCase() + methodType.slice(1)}`;
+                    }
+                });
+            });
+            
+            // Form submission handlers for mobile money confirmation forms
+            const confirmationForms = document.querySelectorAll('#mtn-confirmation-form, #airtel-confirmation-form, #mtn-monthly-form, #airtel-monthly-form');
+            
+            confirmationForms.forEach(function(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your donation! We have received your information and will confirm your payment shortly. You will receive a confirmation email once your donation has been processed.');
+                    form.reset();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
