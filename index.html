@@ -9,55 +9,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-        
-        .why-us-item {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .why-us-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        
-        .why-us-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--deep-purple);
-            background: linear-gradient(135deg, var(--vibrant-teal) 0%, var(--deep-purple) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .why-us-title {
-            font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .why-us-text {
-            font-size: 0.95rem;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -76,12 +34,12 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
-                    <li class="nav-item"><a href="#get-involved" class="nav-link">Get Involved</a></li>
-                    <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
-                    <li class="nav-item"><a href="#donate" class="nav-link">Donate</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -92,13 +50,15 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">The journey to discovering your purpose starts with us</h1>
-                <p class="hero-subtitle">Unlock your unique gifts and talents through our transformative programs and mentorship.</p>
+                <p class="hero-subtitle">Yada experience is a bold, youth driven space empowering young individuals to unlock who they truly are and what they are here for.</p>
                 <div class="hero-buttons">
-                    <a href="#programs" class="btn btn-primary">Explore Programs</a>
-                    <a href="#get-involved" class="btn btn-secondary">Join Us</a>
+                    <a href="programs.html" class="btn btn-primary">Explore Programs</a>
+                    <a href="get-involved.html" class="btn btn-secondary">Join Us</a>
                 </div>
             </div>
         </div>
+        <img src="images/hero-blob.svg" alt="" class="hero-blob animate-float" style="position: absolute; right: 5%; top: 20%; width: 300px; z-index: 0; opacity: 0.6;">
+        <img src="images/hero-character.svg" alt="" class="hero-character animate-float" style="position: absolute; right: 10%; bottom: 10%; width: 250px; z-index: 1;">
     </section>
 
     <!-- Introduction Section -->
@@ -106,74 +66,150 @@
         <div class="intro-wave"></div>
         <div class="container">
             <div class="intro-content">
-                <p>YADA-EXPERIENCE helps young people discover their untapped potential. We create experiences that guide you toward understanding your unique purpose and provide the tools to develop your talents with confidence.</p>
-                <p>"YADA" comes from a Hebrew word meaning "to know" - to have a close relationship with yourself and your abilities. When you understand your purpose, you unlock a life of impact.</p>
+                <p>"YADA" is a Hebrew word that means to know — not just surface-level or head knowledge, but a deep, personal, soul-level understanding of who you truly are.</p>
+                <p>When you understand your purpose, you unlock a life of impact.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section section-alt about" id="about">
+    <!-- Mentor Effect Section -->
+    <section class="section section-alt mentor-effect" id="mentor-effect">
         <div class="container">
             <div class="section-title">
-                <h2>About Us</h2>
+                <h2>The Mentor Effect</h2>
             </div>
+            <p class="text-center">More than 1 in 3 young people grow up without a mentor. Here's why that matters:</p>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">92<span style="font-size: 2rem;">%</span></div>
+                    <p class="stat-text">More likely to volunteer regularly in their communities</p>
+                    <img src="images/volunteer-icon.svg" alt="" style="width: 80px; position: absolute; bottom: 10px; right: 10px; opacity: 0.1;">
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">75<span style="font-size: 2rem;">%</span></div>
+                    <p class="stat-text">More likely to have held a leadership position</p>
+                    <img src="images/leadership-icon.svg" alt="" style="width: 80px; position: absolute; bottom: 10px; right: 10px; opacity: 0.1;">
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">74<span style="font-size: 2rem;">%</span></div>
+                    <p class="stat-text">Say mentors contributed significantly to their success</p>
+                    <img src="images/success-icon.svg" alt="" style="width: 80px; position: absolute; bottom: 10px; right: 10px; opacity: 0.1;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section our-story" id="our-story">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+            </div>
+            
             <div class="row">
                 <div class="col col-md-6 col-sm-12">
-                    <h3>Why Us</h3>
-                    
-                    <div class="why-us-grid">
-                        <div class="why-us-item">
-                            <div class="why-us-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h4 class="why-us-title">We Find Your Spark</h4>
-                            <p class="why-us-text">Every youth has unique brilliance waiting to be discovered</p>
-                        </div>
-                        
-                        <div class="why-us-item">
-                            <div class="why-us-icon">
-                                <i class="fas fa-route"></i>
-                            </div>
-                            <h4 class="why-us-title">Your Unique Path</h4>
-                            <p class="why-us-text">Not a cookie-cutter journey, but one designed just for you</p>
-                        </div>
-                        
-                        <div class="why-us-item">
-                            <div class="why-us-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <h4 class="why-us-title">Skills + Purpose</h4>
-                            <p class="why-us-text">Combining what you're good at with what matters to you</p>
-                        </div>
-                        
-                        <div class="why-us-item">
-                            <div class="why-us-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4 class="why-us-title">Real Mentors</h4>
-                            <p class="why-us-text">Guides who've walked the talk and know the way forward</p>
-                        </div>
-                    </div>
+                    <p>Yada Experience was born from a simple but powerful realization: too many young people are navigating life without a clear sense of identity or direction.</p>
+                    <p>We exist to bridge that gap — creating transformative spaces where young people can pause, reflect, and reconnect with who they are and why they're here.</p>
+                    <p>Through meaningful experiences, honest conversations, and a supportive community, we guide youth on a journey to discover their purpose and walk confidently in it.</p>
                 </div>
                 <div class="col col-md-6 col-sm-12">
-                    <div class="about-vision-mission">
-                        <div class="feature-card">
-                            <h4>Vision</h4>
-                            <p>To raise a generation of purpose-driven young individuals who transform their communities through their unique gifts and talents.</p>
-                        </div>
-                        <div class="feature-card">
-                            <h4>Mission</h4>
-                            <p>To empower youth to discover their purpose, harness their strengths, and create lasting impact through experiences and mentorship.</p>
-                        </div>
+                    <img src="images/story-illustration.svg" alt="Our Story Illustration" class="img-fluid animate-float" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="section section-alt why-us" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose YADA?</h2>
+            </div>
+            
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="why-us-icon">
+                        <i class="fas fa-lightbulb"></i>
                     </div>
+                    <h4 class="why-us-title">We Find Your Spark</h4>
+                    <p class="why-us-text">Every youth has unique brilliance waiting to be discovered</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <div class="why-us-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h4 class="why-us-title">Your Unique Path</h4>
+                    <p class="why-us-text">Not a cookie-cutter journey, but one designed just for you</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <div class="why-us-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="why-us-title">Skills + Purpose</h4>
+                    <p class="why-us-text">Combining what you're good at with what matters to you</p>
+                </div>
+                
+                <div class="why-us-item">
+                    <div class="why-us-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="why-us-title">Real Mentors</h4>
+                    <p class="why-us-text">Guides who've walked the talk and know the way forward</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section values" id="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4 class="value-title">Respect</h4>
+                    <p class="value-text">Valuing uniqueness and treating all with dignity</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4 class="value-title">Collaboration</h4>
+                    <p class="value-text">Working together to achieve shared goals and greater impact</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h4 class="value-title">Integrity</h4>
+                    <p class="value-text">Leading with honesty, accountability, and consistency</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h4 class="value-title">Lifelong Learning</h4>
+                    <p class="value-text">Committed to growth through continuous learning</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section class="section programs" id="programs">
+    <section class="section section-alt programs" id="programs">
         <div class="container">
             <div class="section-title">
                 <h2>Our Programs</h2>
@@ -181,71 +217,42 @@
             <p class="text-center">We offer dynamic programs that foster self-discovery, skill development, and purpose alignment.</p>
             
             <div class="row">
-                <div class="col col-md-4 col-sm-6">
+                <div class="col col-md-6 col-sm-12">
                     <div class="program-card">
                         <div class="program-icon">
                             <i class="fas fa-school"></i>
                         </div>
                         <h3>In-School Programs</h3>
-                        <p>Purpose-driven activities integrated into school environments that help students connect academics with personal growth.</p>
+                        <p>Purpose driven talks and activities that stir up the students desire to purpose discovery.</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px;">
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Interactive purpose talks</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Passion discovery activities</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Gifts and talent discovery</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Questions and answers</li>
+                        </ul>
                         <a href="programs.html#in-school" class="btn btn-tertiary">Learn More</a>
                     </div>
                 </div>
-                <div class="col col-md-4 col-sm-6">
-                    <div class="program-card">
-                        <div class="program-icon">
-                            <i class="fas fa-campground"></i>
-                        </div>
-                        <h3>Holiday Programs</h3>
-                        <p>Immersive experiences during school breaks that accelerate self-discovery and skill development.</p>
-                        <a href="programs.html#holiday" class="btn btn-tertiary">Learn More</a>
-                    </div>
-                </div>
-                <div class="col col-md-4 col-sm-6">
+                <div class="col col-md-6 col-sm-12">
                     <div class="program-card">
                         <div class="program-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h3>Workshops & Events</h3>
-                        <p>Focused sessions on purpose discovery, leadership, and practical skills for real-world impact.</p>
+                        <p>Focused sessions on personal development and practical skills for real world impact.</p>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px;">
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Increased self-awareness</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Increased motivation and engagement</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Positive mindset</li>
+                            <li><i class="fas fa-check-circle" style="color: var(--playful-teal); margin-right: 8px;"></i> Practical life skills</li>
+                        </ul>
                         <a href="programs.html#workshops" class="btn btn-tertiary">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="section section-alt impact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Impact</h2>
-            </div>
-            <div class="row">
-                <div class="col col-md-3 col-sm-6">
-                    <div class="impact-stat">
-                        <div class="impact-number">500+</div>
-                        <div class="impact-label">Youth Served</div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-sm-6">
-                    <div class="impact-stat">
-                        <div class="impact-number">15</div>
-                        <div class="impact-label">Schools Partnered</div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-sm-6">
-                    <div class="impact-stat">
-                        <div class="impact-number">85%</div>
-                        <div class="impact-label">Report Clearer Purpose</div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-sm-6">
-                    <div class="impact-stat">
-                        <div class="impact-number">70%</div>
-                        <div class="impact-label">Improved Leadership</div>
-                    </div>
-                </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="programs.html" class="btn btn-primary">View All Programs</a>
             </div>
         </div>
     </section>
@@ -322,7 +329,7 @@
                             <i class="fas fa-handshake"></i>
                         </div>
                         <h3 class="feature-title">Partner With Us</h3>
-                        <p>Collaborate with YADA-EXPERIENCE to expand our reach and impact in your community.</p>
+                        <p>Let's co-create something meaningful together. Collaborate with YADA-EXPERIENCE to expand our reach.</p>
                         <a href="get-involved.html#partner" class="btn btn-tertiary">Learn More</a>
                     </div>
                 </div>
@@ -400,14 +407,17 @@
                 <div class="donation-option">
                     <div class="donation-amount">$50</div>
                     <p>Provides materials for one youth in a self-discovery workshop</p>
+                    <img src="images/donation-icon-1.svg" alt="" style="width: 60px; position: absolute; top: 20px; right: 20px; opacity: 0.1;">
                 </div>
                 <div class="donation-option">
                     <div class="donation-amount">$100</div>
                     <p>Sponsors a young person in a one-day purpose discovery workshop</p>
+                    <img src="images/donation-icon-2.svg" alt="" style="width: 60px; position: absolute; top: 20px; right: 20px; opacity: 0.1;">
                 </div>
                 <div class="donation-option">
                     <div class="donation-amount">$250</div>
                     <p>Funds a semester of one-on-one mentorship for a young person</p>
+                    <img src="images/donation-icon-3.svg" alt="" style="width: 60px; position: absolute; top: 20px; right: 20px; opacity: 0.1;">
                 </div>
             </div>
             
@@ -555,10 +565,10 @@
                     <div class="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#programs">Programs</a></li>
-                            <li><a href="#events">Events</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="events.html">Events</a></li>
                         </ul>
                     </div>
                 </div>
