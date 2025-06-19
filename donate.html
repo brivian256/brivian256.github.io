@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | YADA-EXPERIENCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="yada_logo.png" alt="YADA Experience Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="programs.html" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="get-involved.html" class="nav-link">Get Involved</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link active">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="donate-hero">
+        <div class="container">
+            <h1>Support Our Mission</h1>
+            <p>Your donation helps us empower more young people to discover their purpose and create lasting impact</p>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">Your Impact</h2>
+            <div class="impact-stats">
+                <div class="impact-stat">
+                    <div class="stat-icon">💡</div>
+                    <div class="stat-number">UGX 50,000</div>
+                    <p>Sponsors one student for a full workshop program</p>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number">UGX 100,000</div>
+                    <p>Funds materials for an entire school program</p>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-number">UGX 200,000</div>
+                    <p>Supports a complete mentorship program for 10 youth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section class="donation-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Payment Method</h2>
+            <div class="donation-options">
+                <!-- PayPal Donation -->
+                <div class="donation-card">
+                    <div class="donation-icon">💳</div>
+                    <h3>International Donors</h3>
+                    <p>Secure online payments via PayPal for international supporters</p>
+                    
+                    <div class="donation-form">
+                        <h4>Select Amount (USD)</h4>
+                        <div class="amount-options">
+                            <button class="amount-btn" data-amount="25">$25</button>
+                            <button class="amount-btn" data-amount="50">$50</button>
+                            <button class="amount-btn" data-amount="100">$100</button>
+                            <button class="amount-btn" data-amount="250">$250</button>
+                        </div>
+                        <input type="number" class="custom-amount" placeholder="Custom amount" min="1">
+                        
+                        <div class="donation-type">
+                            <label>
+                                <input type="radio" name="paypal-type" value="one-time" checked>
+                                One-time donation
+                            </label>
+                            <label>
+                                <input type="radio" name="paypal-type" value="monthly">
+                                Monthly giving
+                            </label>
+                        </div>
+                        
+                        <button class="donate-btn" onclick="processPayPalDonation()">Donate with PayPal</button>
+                    </div>
+                </div>
+
+                <!-- MTN Mobile Money -->
+                <div class="donation-card">
+                    <div class="donation-icon">📱</div>
+                    <h3>MTN Mobile Money</h3>
+                    <p>Quick and easy donations for MTN subscribers in Uganda</p>
+                    
+                    <div class="donation-form">
+                        <h4>Select Amount (UGX)</h4>
+                        <div class="amount-options">
+                            <button class="amount-btn" data-amount="20000">20K</button>
+                            <button class="amount-btn" data-amount="50000">50K</button>
+                            <button class="amount-btn" data-amount="100000">100K</button>
+                            <button class="amount-btn" data-amount="200000">200K</button>
+                        </div>
+                        <input type="number" class="custom-amount" placeholder="Custom amount" min="1000">
+                        
+                        <div class="donation-type">
+                            <label>
+                                <input type="radio" name="mtn-type" value="one-time" checked>
+                                One-time donation
+                            </label>
+                            <label>
+                                <input type="radio" name="mtn-type" value="monthly">
+                                Monthly giving
+                            </label>
+                        </div>
+                        
+                        <button class="donate-btn" onclick="processMTNDonation()">Donate via MTN</button>
+                        
+                        <div class="mobile-money-instructions">
+                            <h4>How to Donate via MTN Mobile Money:</h4>
+                            <ol>
+                                <li>Dial *165# on your MTN phone</li>
+                                <li>Select "Send Money"</li>
+                                <li>Enter recipient number: <strong>256783501007</strong></li>
+                                <li>Enter your donation amount</li>
+                                <li>Enter your PIN to confirm</li>
+                                <li>Send us a message with your transaction details</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Airtel Money -->
+                <div class="donation-card">
+                    <div class="donation-icon">💰</div>
+                    <h3>Airtel Money</h3>
+                    <p>Convenient donations for Airtel subscribers in Uganda</p>
+                    
+                    <div class="donation-form">
+                        <h4>Select Amount (UGX)</h4>
+                        <div class="amount-options">
+                            <button class="amount-btn" data-amount="20000">20K</button>
+                            <button class="amount-btn" data-amount="50000">50K</button>
+                            <button class="amount-btn" data-amount="100000">100K</button>
+                            <button class="amount-btn" data-amount="200000">200K</button>
+                        </div>
+                        <input type="number" class="custom-amount" placeholder="Custom amount" min="1000">
+                        
+                        <div class="donation-type">
+                            <label>
+                                <input type="radio" name="airtel-type" value="one-time" checked>
+                                One-time donation
+                            </label>
+                            <label>
+                                <input type="radio" name="airtel-type" value="monthly">
+                                Monthly giving
+                            </label>
+                        </div>
+                        
+                        <button class="donate-btn" onclick="processAirtelDonation()">Donate via Airtel</button>
+                        
+                        <div class="mobile-money-instructions">
+                            <h4>How to Donate via Airtel Money:</h4>
+                            <ol>
+                                <li>Dial *185# on your Airtel phone</li>
+                                <li>Select "Send Money"</li>
+                                <li>Enter recipient number: <strong>256783501007</strong></li>
+                                <li>Enter your donation amount</li>
+                                <li>Enter your PIN to confirm</li>
+                                <li>Send us a message with your transaction details</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Give -->
+    <section class="other-giving-section">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Support Us</h2>
+            <div class="giving-options">
+                <div class="giving-card">
+                    <div class="giving-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7ZM23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Volunteer Your Time</h3>
+                    <p>Share your skills and expertise by volunteering with our programs and events</p>
+                    <a href="get-involved.html" class="giving-btn">Learn More</a>
+                </div>
+                
+                <div class="giving-card">
+                    <div class="giving-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Sponsor a Program</h3>
+                    <p>Fund specific programs or events to create targeted impact in youth development</p>
+                    <a href="contact.html" class="giving-btn">Contact Us</a>
+                </div>
+                
+                <div class="giving-card">
+                    <div class="giving-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12L10 14L16 8M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Corporate Partnership</h3>
+                    <p>Partner with us for corporate social responsibility and employee engagement programs</p>
+                    <a href="get-involved.html" class="giving-btn">Explore Partnership</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="transparency-section">
+        <div class="container">
+            <h2 class="section-title">Our Commitment to Transparency</h2>
+            <div class="transparency-content">
+                <div class="transparency-card">
+                    <h3>How We Use Your Donations</h3>
+                    <div class="usage-breakdown">
+                        <div class="usage-item">
+                            <div class="usage-percentage">70%</div>
+                            <div class="usage-description">
+                                <h4>Direct Program Costs</h4>
+                                <p>Materials, venue costs, and program implementation</p>
+                            </div>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-percentage">20%</div>
+                            <div class="usage-description">
+                                <h4>Staff and Training</h4>
+                                <p>Facilitator fees and capacity building</p>
+                            </div>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-percentage">10%</div>
+                            <div class="usage-description">
+                                <h4>Administrative Costs</h4>
+                                <p>Operations and organizational sustainability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="transparency-card">
+                    <h3>Stay Connected</h3>
+                    <p>We believe in keeping our donors informed about the impact of their contributions. When you donate, you'll receive:</p>
+                    <ul>
+                        <li>Quarterly impact reports</li>
+                        <li>Updates on program outcomes</li>
+                        <li>Stories from beneficiaries</li>
+                        <li>Invitations to special events</li>
+                        <li>Annual financial summaries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="yada_logo.png" alt="YADA Experience Logo" class="footer-logo">
+                    <p>Empowering young individuals to discover their purpose and create lasting impact.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Kampala, Uganda</p>
+                    <p>+256 783 501 007</p>
+                    <p>yadaexperience19@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yadaxperience" target="_blank">Instagram</a>
+                        <a href="https://x.com/yadaxperience" target="_blank">Twitter</a>
+                        <a href="https://wa.me/256783501007" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YADA-EXPERIENCE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="donation.js"></script>
+</body>
+</html>
+

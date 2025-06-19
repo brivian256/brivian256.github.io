@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | YADA-EXPERIENCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="yada_logo.png" alt="YADA Experience Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="programs.html" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link active">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="get-involved.html" class="nav-link">Get Involved</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="events-hero">
+        <div class="container">
+            <h1>Events & Activities</h1>
+            <p>Join us for transformative experiences that will help you discover your purpose and connect with like-minded peers</p>
+        </div>
+    </section>
+
+    <!-- Featured Event -->
+    <section class="featured-event-section">
+        <div class="container">
+            <div id="featured-event" class="featured-event">
+                <!-- Featured event will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div id="upcoming-events" class="events-grid">
+                <!-- Upcoming events will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="past-events-section">
+        <div class="container">
+            <h2 class="section-title">Past Events</h2>
+            <div id="past-events" class="events-grid">
+                <!-- Past events will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-card">
+                <h2>Register for an Event</h2>
+                <p>Sign up to participate in our upcoming events and start your journey of purpose discovery</p>
+                <form id="registration-form" class="registration-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" min="13" max="30" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="school">School/Institution</label>
+                        <input type="text" id="school" name="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event">Select Event</label>
+                        <select id="event" name="event" required>
+                            <option value="">Choose an event...</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to attend this event?</label>
+                        <textarea id="motivation" name="motivation" placeholder="Tell us what motivates you to join this event..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive updates about upcoming events, programs, and opportunities</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="newsletter-input">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="yada_logo.png" alt="YADA Experience Logo" class="footer-logo">
+                    <p>Empowering young individuals to discover their purpose and create lasting impact.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Kampala, Uganda</p>
+                    <p>+256 783 501 007</p>
+                    <p>yadaexperience19@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yadaxperience" target="_blank">Instagram</a>
+                        <a href="https://x.com/yadaxperience" target="_blank">Twitter</a>
+                        <a href="https://wa.me/256783501007" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YADA-EXPERIENCE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>
+
