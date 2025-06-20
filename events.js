@@ -2,22 +2,6 @@
 const events = [
     {
         id: 1,
-        title: "Careers Day at Oxford High School",
-        date: "2025-06-17",
-        time: "9:30 AM - 4:00 PM",
-        location: "Oxford High School",
-        description: "A comprehensive careers day focusing on purpose discovery and life skills development for students.",
-        topics: [
-            "Effects of drug substance abuse and peer pressure",
-            "Sexual purity",
-            "Mentorship in career development",
-            "Why discover your purpose"
-        ],
-        category: "school-program",
-        registrationOpen: true
-    },
-    {
-        id: 2,
         title: "Purpose Discovery Workshop",
         date: "2025-07-15",
         time: "10:00 AM - 3:00 PM",
@@ -33,7 +17,7 @@ const events = [
         registrationOpen: true
     },
     {
-        id: 3,
+        id: 2,
         title: "Leadership Skills Bootcamp",
         date: "2025-08-20",
         time: "9:00 AM - 5:00 PM",
@@ -49,19 +33,67 @@ const events = [
         registrationOpen: true
     },
     {
-        id: 4,
-        title: "Mentorship Matching Event",
-        date: "2025-05-10",
-        time: "2:00 PM - 6:00 PM",
-        location: "Kampala International University",
-        description: "Connect with experienced mentors who can guide your personal and professional development journey.",
+        id: 3,
+        title: "Careers Day at Oxford High School",
+        date: "2025-06-17",
+        time: "9:30 AM - 4:00 PM",
+        location: "Oxford High School",
+        description: "A comprehensive careers day focusing on purpose discovery and life skills development for students.",
         topics: [
-            "Speed mentoring sessions",
-            "Career pathway discussions",
-            "Networking opportunities",
-            "Mentor-mentee relationship building"
+            "Effects of drug substance abuse and peer pressure",
+            "Sexual purity",
+            "Mentorship in career development",
+            "Why discover your purpose"
         ],
-        category: "networking",
+        category: "school-program",
+        registrationOpen: true
+    },
+    {
+        id: 4,
+        title: "Purpose Discovery Session at Greenhill Academy",
+        date: "2025-05-30",
+        time: "10:00 AM - 12:30 PM",
+        location: "Greenhill Academy",
+        description: "Interactive session with S3 and S4 students focusing on building confidence and discovering purpose.",
+        topics: [
+            "Commitment and excellence",
+            "Building confidence",
+            "Purpose discovery",
+            "Personal development"
+        ],
+        category: "school-program",
+        registrationOpen: false
+    },
+    {
+        id: 5,
+        title: "Purpose Discovery Sessions at Kenzie Immaculate Foundation",
+        date: "2024-12-13",
+        time: "Full Day Program",
+        location: "Kenzie Immaculate Foundation",
+        description: "5-day intensive purpose discovery program from December 9th to 13th, 2024.",
+        topics: [
+            "Discovering your purpose",
+            "Self-awareness exercises",
+            "Goal setting",
+            "Personal growth strategies"
+        ],
+        category: "workshop",
+        registrationOpen: false
+    },
+    {
+        id: 6,
+        title: "Purpose Discovery Talk at Taibah International",
+        date: "2024-11-27",
+        time: "Morning Session",
+        location: "Taibah International",
+        description: "Engaging talk focused on helping students discover their unique purpose and calling.",
+        topics: [
+            "Discovering your purpose",
+            "Understanding your strengths",
+            "Future planning",
+            "Personal development"
+        ],
+        category: "school-program",
         registrationOpen: false
     }
 ];
