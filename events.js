@@ -317,3 +317,113 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+// Function to render events in the new card format
+function renderEvents() {
+    const upcomingContainer = document.getElementById('upcoming-events');
+    const pastContainer = document.getElementById('past-events');
+    
+    if (!upcomingContainer || !pastContainer) return;
+    
+    const currentDate = new Date();
+    const upcomingEvents = events.filter(event => new Date(event.date) >= currentDate);
+    const pastEvents = events.filter(event => new Date(event.date) < currentDate);
+    
+    // Render upcoming events
+    upcomingContainer.innerHTML = upcomingEvents.map(event => `
+        <div class="event-card-modern">
+            <div class="event-card-header">
+                <div class="event-date-badge">${formatDate(event.date)}</div>
+                <h3>${event.title}</h3>
+                <p class="event-time">${event.time}</p>
+                <p class="event-location">📍 ${event.location}</p>
+            </div>
+            <div class="event-content">
+                <p>${event.description}</p>
+                <div class="event-topics">
+                    <h4>Topics:</h4>
+                    <ul>
+                        ${event.topics.map(topic => `<li>${topic}</li>`).join('')}
+                    </ul>
+                </div>
+                ${event.registrationOpen ? 
+                    '<button class="register-btn" onclick="scrollToRegistration()">Register</button>' : 
+                    '<button class="register-btn" disabled>Registration Closed</button>'
+                }
+            </div>
+        </div>
+    `).join('');
+    
+    // Render past events
+    pastContainer.innerHTML = pastEvents.map(event => `
+        <div class="event-card-modern past-event">
+            <div class="event-card-header">
+                <div class="event-date-badge">${formatDate(event.date)}</div>
+                <h3>${event.title}</h3>
+                <p class="event-time">${event.time}</p>
+                <p class="event-location">📍 ${event.location}</p>
+            </div>
+            <div class="event-content">
+                <p>${event.description}</p>
+                <div class="event-topics">
+                    <h4>Topics Covered:</h4>
+                    <ul>
+                        ${event.topics.map(topic => `<li>${topic}</li>`).join('')}
+                    </ul>
+                </div>
+                <button class="register-btn" disabled>Event Completed</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function scrollToRegistration() {
+    document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Event registration form handling
+document.addEventListener('DOMContentLoaded', function() {
+    renderEvents();
+    
+    const registrationForm = document.getElementById('eventRegistrationForm');
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const registrationData = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                age: formData.get('age'),
+                eventChoice: formData.get('eventChoice'),
+                motivation: formData.get('motivation')
+            };
+            
+            // Here you would typically send the data to a server
+            console.log('Registration data:', registrationData);
+            
+            // Show success message
+            alert('Thank you for registering! We will contact you with more details soon.');
+            this.reset();
+        });
+    }
+    
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Here you would typically send the email to a server
+            console.log('Newsletter subscription:', email);
+            
+            // Show success message
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+    }
+});
+

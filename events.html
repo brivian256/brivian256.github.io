@@ -4,38 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | YADA-EXPERIENCE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="yada_logo.png" alt="YADA Experience Logo" class="logo-img">
+                <img src="yada_logo.png" alt="YADA-EXPERIENCE" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="programs.html" class="nav-link">Programs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="events.html" class="nav-link active">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a href="get-involved.html" class="nav-link">Get Involved</a>
-                </li>
-                <li class="nav-item">
-                    <a href="donate.html" class="nav-link">Donate</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -54,92 +40,111 @@
     </section>
 
     <!-- Featured Event -->
-    <section class="featured-event-section">
+    <section class="featured-event">
         <div class="container">
-            <div id="featured-event" class="featured-event">
-                <!-- Featured event will be populated by JavaScript -->
+            <h2>Featured Event: Purpose Discovery Workshop</h2>
+            <div class="event-details">
+                <div class="event-detail">
+                    <strong>Date</strong>
+                    <span>July 15, 2025</span>
+                </div>
+                <div class="event-detail">
+                    <strong>Time</strong>
+                    <span>10:00 AM - 3:00 PM</span>
+                </div>
+                <div class="event-detail">
+                    <strong>Location</strong>
+                    <span>YADA Experience Center, Kampala</span>
+                </div>
             </div>
+            <p>An intensive workshop designed to help young people uncover their unique purpose and calling.</p>
+            
+            <h4>Topics to be discussed:</h4>
+            <ul>
+                <li>Self-reflection exercises</li>
+                <li>Strengths and talents assessment</li>
+                <li>Vision board creation</li>
+                <li>Goal setting strategies</li>
+            </ul>
+            
+            <a href="#register" class="cta-button">Register Now</a>
         </div>
     </section>
 
-    <!-- Upcoming Events -->
+    <!-- Events Grid -->
     <section class="events-section">
         <div class="container">
             <h2 class="section-title">Upcoming Events</h2>
-            <div id="upcoming-events" class="events-grid">
-                <!-- Upcoming events will be populated by JavaScript -->
+            <div class="events-grid-modern" id="upcoming-events">
+                <!-- Events will be populated by JavaScript -->
             </div>
-        </div>
-    </section>
 
-    <!-- Past Events -->
-    <section class="past-events-section">
-        <div class="container">
             <h2 class="section-title">Past Events</h2>
-            <div id="past-events" class="events-grid">
+            <div class="events-grid-modern" id="past-events">
                 <!-- Past events will be populated by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Event Registration -->
-    <section class="registration-section">
+    <!-- Registration Section -->
+    <section class="registration-section" id="register">
         <div class="container">
             <div class="registration-card">
                 <h2>Register for an Event</h2>
                 <p>Sign up to participate in our upcoming events and start your journey of purpose discovery</p>
-                <form id="registration-form" class="registration-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" id="age" name="age" min="13" max="30" required>
-                        </div>
-                    </div>
+                
+                <form class="registration-form" id="eventRegistrationForm">
                     <div class="form-group">
-                        <label for="school">School/Institution</label>
-                        <input type="text" id="school" name="school" required>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="event">Select Event</label>
-                        <select id="event" name="event" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="13" max="35" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="eventChoice">Select Event</label>
+                        <select id="eventChoice" name="eventChoice" required>
                             <option value="">Choose an event...</option>
-                            <!-- Options will be populated by JavaScript -->
+                            <option value="purpose-workshop">Purpose Discovery Workshop - July 15, 2025</option>
+                            <option value="leadership-bootcamp">Leadership Skills Bootcamp - August 20, 2025</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label for="motivation">Why do you want to attend this event?</label>
-                        <textarea id="motivation" name="motivation" placeholder="Tell us what motivates you to join this event..." required></textarea>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us about your motivation and what you hope to gain..."></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Register Now</button>
+                    
+                    <button type="submit" class="register-btn">Register Now</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Signup -->
+    <!-- Newsletter Section -->
     <section class="newsletter-section">
         <div class="container">
-            <div class="newsletter-card">
+            <div class="newsletter-content">
                 <h2>Stay Updated</h2>
                 <p>Subscribe to our newsletter to receive updates about upcoming events, programs, and opportunities</p>
-                <form id="newsletter-form" class="newsletter-form">
+                
+                <form class="newsletter-form" id="newsletterForm">
                     <div class="newsletter-input">
-                        <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
-                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
                     </div>
                 </form>
             </div>
@@ -151,30 +156,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="yada_logo.png" alt="YADA Experience Logo" class="footer-logo">
+                    <img src="yada_logo.png" alt="YADA-EXPERIENCE" class="footer-logo">
                     <p>Empowering young individuals to discover their purpose and create lasting impact.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="programs.html">Programs</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="get-involved.html">Get Involved</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Kampala, Uganda</p>
-                    <p>+256 783 501 007</p>
-                    <p>yadaexperience19@gmail.com</p>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
+                    <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/yadaxperience" target="_blank">Instagram</a>
-                        <a href="https://x.com/yadaxperience" target="_blank">Twitter</a>
-                        <a href="https://wa.me/256783501007" target="_blank">WhatsApp</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -184,8 +193,8 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
     <script src="events.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
 

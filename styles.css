@@ -44,7 +44,7 @@ body {
 }
 
 .nav-logo .logo-img {
-    height: 90px;
+    height: 60px;
     width: auto;
 }
 
@@ -782,6 +782,608 @@ body {
 
     .nav-logo .logo-img {
         height: 50px;
+    }
+}
+
+
+/* Enhanced Interactive Layouts for Programs, Events, Donate, Get Involved Pages */
+
+/* Programs Page - Dynamic Grid Layout */
+.programs-section {
+    padding: 3rem 0;
+    background: white;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.program-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid #e2e8f0;
+}
+
+.program-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(27, 154, 154, 0.2);
+}
+
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.program-card:hover::before {
+    transform: scaleX(1);
+}
+
+.program-header {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.program-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.program-content {
+    padding: 2rem;
+}
+
+.program-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #bae6fd;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Events Page - Timeline and Card Layout */
+.events-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    transform: translateX(-50%);
+}
+
+.event-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.event-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.event-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-content {
+    flex: 1;
+    max-width: 45%;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.event-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(27, 154, 154, 0.15);
+}
+
+.event-date-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.event-timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(27, 154, 154, 0.2);
+    animation: ripple 2s infinite;
+}
+
+@keyframes ripple {
+    0% { box-shadow: 0 0 0 4px rgba(27, 154, 154, 0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(27, 154, 154, 0.1); }
+    100% { box-shadow: 0 0 0 4px rgba(27, 154, 154, 0.2); }
+}
+
+.events-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.event-card-modern {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.event-card-modern:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 25px 60px rgba(27, 154, 154, 0.2);
+}
+
+.event-card-header {
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.event-card-modern:hover .event-card-header::before {
+    top: -25%;
+    right: -25%;
+}
+
+/* Donate Page - Interactive Payment Cards */
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.donation-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.donation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(27, 154, 154, 0.2);
+    border-color: #1B9A9A;
+}
+
+.donation-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.donation-card:hover .donation-icon::before {
+    left: 100%;
+}
+
+.amount-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.amount-btn {
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.amount-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.amount-btn:hover::before,
+.amount-btn.active::before {
+    left: 0;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+    color: white;
+    border-color: #1B9A9A;
+    transform: translateY(-2px);
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.impact-stat {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.impact-stat:hover::before {
+    transform: scaleX(1);
+}
+
+.impact-stat:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 15px 40px rgba(27, 154, 154, 0.15);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1B9A9A;
+    margin-bottom: 0.5rem;
+}
+
+/* Get Involved Page - Interactive Opportunity Cards */
+.involvement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.involvement-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.involvement-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 70px rgba(27, 154, 154, 0.2);
+}
+
+.involvement-header {
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.involvement-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.involvement-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.involvement-icon svg {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+.involvement-content {
+    padding: 2rem;
+}
+
+.involvement-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.involvement-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.involvement-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.involvement-list li:hover {
+    color: #1B9A9A;
+    transform: translateX(5px);
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6B46C1, #D946EF);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    left: 0;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(27, 154, 154, 0.3);
+}
+
+/* Process Steps - Interactive Timeline */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(27, 154, 154, 0.2);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, #1B9A9A, #6B46C1);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse-ring 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .programs-grid,
+    .events-grid-modern,
+    .donation-options,
+    .involvement-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .events-timeline::before {
+        left: 20px;
+    }
+    
+    .event-item {
+        flex-direction: column !important;
+        padding-left: 40px;
+    }
+    
+    .event-content {
+        max-width: 100%;
+    }
+    
+    .event-timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+    
+    .amount-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
     }
 }
 

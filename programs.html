@@ -4,38 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs | YADA-EXPERIENCE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="yada_logo.png" alt="YADA Experience Logo" class="logo-img">
+                <img src="yada_logo.png" alt="YADA-EXPERIENCE" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="programs.html" class="nav-link active">Programs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="events.html" class="nav-link">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a href="get-involved.html" class="nav-link">Get Involved</a>
-                </li>
-                <li class="nav-item">
-                    <a href="donate.html" class="nav-link">Donate</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link active">Programs</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -56,24 +42,39 @@
     <!-- Programs Section -->
     <section class="programs-section">
         <div class="container">
-            <!-- In-School Programs -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h3>In-School Programs</h3>
-                    <p>Purpose-driven talks and activities that stir up students' desire for purpose discovery</p>
-                </div>
-                <div class="program-content">
-                    <p>Our in-school programs bring purpose discovery directly to educational institutions, creating transformative experiences within familiar learning environments.</p>
-                    
-                    <h4>Key Components:</h4>
-                    <ul class="program-features">
-                        <li>Interactive purpose talks that engage and inspire students</li>
-                        <li>Passion discovery activities tailored to different age groups</li>
-                        <li>Gifts and talent discovery sessions</li>
-                        <li>Interactive Q&A sessions for deeper exploration</li>
-                    </ul>
+            <div class="programs-grid">
+                <!-- In-School Programs -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            🎓
+                        </div>
+                        <h3>In-School Programs</h3>
+                        <p>Purpose-driven talks and activities that stir up students' desire for purpose discovery</p>
+                    </div>
+                    <div class="program-content">
+                        <p>Our in-school programs bring purpose discovery directly to educational institutions, creating transformative experiences within familiar learning environments.</p>
+                        
+                        <h4>Key Components:</h4>
+                        <div class="program-features">
+                            <div class="feature-item">
+                                <strong>Interactive Talks</strong>
+                                <p>Purpose talks that engage and inspire students</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Passion Discovery</strong>
+                                <p>Activities tailored to different age groups</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Talent Sessions</strong>
+                                <p>Gifts and talent discovery workshops</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Q&A Sessions</strong>
+                                <p>Interactive discussions for deeper exploration</p>
+                            </div>
+                        </div>
 
-                    <div class="program-benefits">
                         <h4>Benefits for Students:</h4>
                         <ul class="benefits-list">
                             <li>Increased self-awareness and personal insight</li>
@@ -81,29 +82,43 @@
                             <li>Development of a positive mindset toward their future</li>
                             <li>Better understanding of their unique strengths and abilities</li>
                         </ul>
+                        
+                        <a href="contact.html" class="cta-button">Request a Program</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Holiday Programs -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h3>Holiday Programs</h3>
-                    <p>Intensive experiences during school breaks for deeper exploration and skill development</p>
-                </div>
-                <div class="program-content">
-                    <p>Our holiday programs offer extended opportunities for young people to dive deeper into purpose discovery and personal development during school breaks.</p>
-                    
-                    <h4>Program Areas:</h4>
-                    <ul class="program-features">
-                        <li>Self-Discovery and Purpose Development workshops</li>
-                        <li>Skill Development in communication, leadership, and critical thinking</li>
-                        <li>Emotional intelligence training and practice</li>
-                        <li>Networking opportunities with peers and mentors</li>
-                        <li>Career and life guidance sessions</li>
-                    </ul>
+                <!-- Holiday Programs -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            🌟
+                        </div>
+                        <h3>Holiday Programs</h3>
+                        <p>Intensive experiences during school breaks for deeper exploration and skill development</p>
+                    </div>
+                    <div class="program-content">
+                        <p>Our holiday programs offer extended opportunities for young people to dive deeper into purpose discovery and personal development during school breaks.</p>
+                        
+                        <h4>Program Areas:</h4>
+                        <div class="program-features">
+                            <div class="feature-item">
+                                <strong>Self-Discovery</strong>
+                                <p>Purpose development workshops</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Skill Building</strong>
+                                <p>Communication, leadership, critical thinking</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Emotional Intelligence</strong>
+                                <p>Training and practice sessions</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Networking</strong>
+                                <p>Connect with peers and mentors</p>
+                            </div>
+                        </div>
 
-                    <div class="program-benefits">
                         <h4>What Participants Gain:</h4>
                         <ul class="benefits-list">
                             <li>Clarity about their strengths, purpose, and career paths</li>
@@ -112,30 +127,43 @@
                             <li>Enhanced well-being and reduced stress and anxiety</li>
                             <li>A supportive network of like-minded peers and mentors</li>
                         </ul>
+                        
+                        <a href="events.html" class="cta-button">View Upcoming Programs</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Workshops and Events -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h3>Workshops and Events</h3>
-                    <p>Focused sessions on personal development and practical skills for real-world impact</p>
-                </div>
-                <div class="program-content">
-                    <p>Our workshops and events provide targeted learning experiences that combine personal development with practical skill-building for immediate application.</p>
-                    
-                    <h4>Workshop Topics Include:</h4>
-                    <ul class="program-features">
-                        <li>Leadership development and team building</li>
-                        <li>Communication skills and public speaking</li>
-                        <li>Goal setting and achievement strategies</li>
-                        <li>Emotional intelligence and relationship building</li>
-                        <li>Career exploration and planning</li>
-                        <li>Financial literacy and entrepreneurship basics</li>
-                    </ul>
+                <!-- Workshops and Events -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            🚀
+                        </div>
+                        <h3>Workshops & Events</h3>
+                        <p>Focused sessions on personal development and practical skills for real-world impact</p>
+                    </div>
+                    <div class="program-content">
+                        <p>Our workshops and events provide targeted learning experiences that combine personal development with practical skill-building for immediate application.</p>
+                        
+                        <h4>Workshop Topics Include:</h4>
+                        <div class="program-features">
+                            <div class="feature-item">
+                                <strong>Leadership</strong>
+                                <p>Development and team building</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Communication</strong>
+                                <p>Skills and public speaking</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Goal Setting</strong>
+                                <p>Achievement strategies</p>
+                            </div>
+                            <div class="feature-item">
+                                <strong>Career Planning</strong>
+                                <p>Exploration and guidance</p>
+                            </div>
+                        </div>
 
-                    <div class="program-benefits">
                         <h4>Expected Outcomes:</h4>
                         <ul class="benefits-list">
                             <li>Practical skills that can be immediately applied</li>
@@ -144,6 +172,8 @@
                             <li>Enhanced ability to contribute positively to communities</li>
                             <li>Foundation for creating lasting legacy and impact</li>
                         </ul>
+                        
+                        <a href="events.html" class="cta-button">Join a Workshop</a>
                     </div>
                 </div>
             </div>
@@ -151,21 +181,24 @@
     </section>
 
     <!-- Program Impact -->
-    <section class="impact-section">
+    <section class="impact-stats">
         <div class="container">
             <h2 class="section-title">Program Impact</h2>
-            <div class="impact-stats">
+            <div class="stats-grid">
                 <div class="impact-stat">
+                    <div class="stat-icon">🎯</div>
                     <div class="stat-number">500+</div>
-                    <p>Students Reached</p>
+                    <div class="stat-text">Students Reached</div>
                 </div>
                 <div class="impact-stat">
+                    <div class="stat-icon">🏫</div>
                     <div class="stat-number">15+</div>
-                    <p>Schools Partnered</p>
+                    <div class="stat-text">Schools Partnered</div>
                 </div>
                 <div class="impact-stat">
+                    <div class="stat-icon">⭐</div>
                     <div class="stat-number">95%</div>
-                    <p>Satisfaction Rate</p>
+                    <div class="stat-text">Satisfaction Rate</div>
                 </div>
             </div>
         </div>
@@ -190,30 +223,34 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="yada_logo.png" alt="YADA Experience Logo" class="footer-logo">
+                    <img src="yada_logo.png" alt="YADA-EXPERIENCE" class="footer-logo">
                     <p>Empowering young individuals to discover their purpose and create lasting impact.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="programs.html">Programs</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="get-involved.html">Get Involved</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Kampala, Uganda</p>
-                    <p>+256 783 501 007</p>
-                    <p>yadaexperience19@gmail.com</p>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Follow Us</h4>
+                    <h4>Connect</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/yadaxperience" target="_blank">Instagram</a>
-                        <a href="https://x.com/yadaxperience" target="_blank">Twitter</a>
-                        <a href="https://wa.me/256783501007" target="_blank">WhatsApp</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
                     </div>
                 </div>
             </div>
